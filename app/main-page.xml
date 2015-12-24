@@ -1,0 +1,29 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <StackLayout orientation="vertical">
+    <StackLayout orientation="horizontal">
+    <Label text="Enter Amount   "/>
+    <TextField id="amt" width="300px" hint="amount" keyboardType="number" />
+    </StackLayout>
+    <Label text="     " width="300px"/>
+    <StackLayout orientation="horizontal">
+    <Label text="Debit Card  "/>  
+    <Switch checked="{{ isCreditCard }}" width="200px" />
+    <Label text="  Credit Card" />
+    </StackLayout>
+    <Label text="     " width="300px"/>
+    <Button text="Calculate" tap="Calculate" />
+    <Label text="    " width="300px"/>
+    <StackLayout orientation="horizontal">
+    <Label text="Card Charges : " />
+    <Label text="{{cardCharge}}" class="strong" />
+    </StackLayout>
+    <StackLayout orientation="horizontal">
+    <Label text="Service Charge : "/>
+    <Label text="{{serviceCharge}}" class="strong" />
+    </StackLayout>
+    <StackLayout orientation="horizontal">
+    <Label text="Total : " class="strong"/>
+    <Label text="{{total}}" class="strong red"/>
+    </StackLayout>
+  </StackLayout>
+</Page>
